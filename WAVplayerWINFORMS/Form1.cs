@@ -32,11 +32,11 @@ namespace WAVplayerWINFORMS
                 int selectedIndex = playlistWindow.SelectedIndex;
                 player.SoundLocation = _items[selectedIndex];
                 player.Play();
-                DisplaySongPlaying(label2);
+                DisplaySongPlaying(_items[selectedIndex]);
             }
             catch
             {
-                DisplayError(label1);
+                DisplayError("The file you entered is not a WAV. Please select a new file.");
             }
         }
         
@@ -47,20 +47,7 @@ namespace WAVplayerWINFORMS
         
         private void addbutton_Click(object sender, EventArgs e)
         {
-            if (this.NewSongPlaylistEntry.Text != "")
-            {
-                AddItems(_items, NewSongPlaylistEntry.Text);
-
-                ResetPlaylist(_items);
-
-                this.NewSongPlaylistEntry.Focus();
-            }
-            else
-            {
-                DisplayError(label1);
-                //MessageBox.Show("Please enter a file to add.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.NewSongPlaylistEntry.Focus();
-            }
+            EvaluateSongEntry();
         }
 
         private void removebutton_Click(object sender, EventArgs e)
@@ -87,17 +74,7 @@ namespace WAVplayerWINFORMS
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                if (NewSongPlaylistEntry.Text == "")
-                {
-                    DisplayError(label1);
-                }
-                else
-                {
-                    AddItems(_items, NewSongPlaylistEntry.Text);
-                    ResetPlaylist(_items);
-                }
-                //this.NewSongPlaylistEntry.Focus();
-                //refactor without the focus method
+                EvaluateSongEntry();
             }
         }
         
@@ -110,22 +87,16 @@ namespace WAVplayerWINFORMS
         {
             playlistWindow.DataSource = null;
             playlistWindow.DataSource = list;
-            this.NewSongPlaylistEntry.Clear();
         }
 
-        private void DisplaySongPlaying(Label songplayWindow)
+        private void DisplaySongPlaying(string filepath)
         {
-            int selectedIndex = playlistWindow.SelectedIndex;
-            string filepath = _items[selectedIndex] as string;
-            songplayWindow.Text = "Now Playing - " + filepath.ToString();
+            label2.Text = "Now Playing - " + filepath.ToString();
         }
         
-        private void DisplayError(Label errorWindow)
+        private void DisplayError(string errorMessage)
         {
-            int selectedIndex = playlistWindow.SelectedIndex;
-            //if (selectedIndex = ".mp3" as string)
-            errorWindow.Text = "ERROR - Please Enter a file to be added to the playlist".ToString();
-            //string extension = Path.GetExtension(filepath);
+            label1.Text = errorMessage;
         }
 
         private void browserButton_Click(object sender, EventArgs e)
@@ -144,8 +115,20 @@ namespace WAVplayerWINFORMS
 		        {
                 }
             }
+        }
 
-	     
+        private void EvaluateSongEntry()
+        {
+            if (NewSongPlaylistEntry.Text == "")
+            {
+                DisplayError("You must enter a file to be added to the playlist window.");
+            }
+            else
+            {
+                AddItems(_items, NewSongPlaylistEntry.Text);
+                ResetPlaylist(_items);
+                NewSongPlaylistEntry.Clear();
+            }
         }
 
         
