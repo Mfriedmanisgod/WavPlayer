@@ -125,7 +125,7 @@ namespace WAVplayerWINFORMS
             int selectedIndex = playlistWindow.SelectedIndex;
             //if (selectedIndex = ".mp3" as string)
             errorWindow.Text = "ERROR - Please Enter a file to be added to the playlist".ToString();
-            string extension = Path.GetExtension(filepath);
+            //string extension = Path.GetExtension(filepath);
         }
 
         private void browserButton_Click(object sender, EventArgs e)
