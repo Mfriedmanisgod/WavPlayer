@@ -123,17 +123,15 @@ namespace WAVplayerWINFORMS
         private void DisplayError(Label errorWindow)
         {
             int selectedIndex = playlistWindow.SelectedIndex;
-
             //if (selectedIndex = ".mp3" as string)
             errorWindow.Text = "ERROR - Please Enter a file to be added to the playlist".ToString();
             string extension = Path.GetExtension(filepath);
-            
-
         }
 
         private void browserButton_Click(object sender, EventArgs e)
         {
             DialogResult result = openFileDialog1.ShowDialog();
+
             if (result == DialogResult.OK) 
             {
                 string file = openFileDialog1.FileName;
@@ -152,9 +150,7 @@ namespace WAVplayerWINFORMS
 
         
 
-        
 
-        
             
     }
 }

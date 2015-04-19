@@ -41,6 +41,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+<<<<<<< HEAD
+=======
+            this.groupBox2.SuspendLayout();
+>>>>>>> 11836b5728152075a2dbb21d0dacfcb244427154
             this.SuspendLayout();
             // 
             // Play
@@ -72,7 +76,10 @@
             this.playlistWindow.Name = "playlistWindow";
             this.playlistWindow.Size = new System.Drawing.Size(244, 199);
             this.playlistWindow.TabIndex = 6;
+<<<<<<< HEAD
             
+=======
+>>>>>>> 11836b5728152075a2dbb21d0dacfcb244427154
             // 
             // Add
             // 
@@ -111,12 +118,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(21, 190);
+=======
+            this.label1.Location = new System.Drawing.Point(6, 0);
+>>>>>>> 11836b5728152075a2dbb21d0dacfcb244427154
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 12;
             this.label1.Text = "Error list";
+<<<<<<< HEAD
             
+=======
+>>>>>>> 11836b5728152075a2dbb21d0dacfcb244427154
             // 
             // openFileDialog1
             // 
@@ -148,15 +162,26 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(15, 64);
             this.groupBox1.Name = "groupBox1";
+<<<<<<< HEAD
             this.groupBox1.Size = new System.Drawing.Size(329, 61);
+=======
+            this.groupBox1.Size = new System.Drawing.Size(329, 27);
+>>>>>>> 11836b5728152075a2dbb21d0dacfcb244427154
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
             // groupBox2
             // 
+<<<<<<< HEAD
             this.groupBox2.Location = new System.Drawing.Point(15, 190);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(329, 59);
+=======
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(15, 221);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(329, 28);
+>>>>>>> 11836b5728152075a2dbb21d0dacfcb244427154
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
@@ -165,7 +190,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 261);
+<<<<<<< HEAD
             this.Controls.Add(this.label1);
+=======
+>>>>>>> 11836b5728152075a2dbb21d0dacfcb244427154
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Stop);
@@ -179,6 +207,11 @@
             this.Text = "Willard\'s WAV Wizzard";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+<<<<<<< HEAD
+=======
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+>>>>>>> 11836b5728152075a2dbb21d0dacfcb244427154
             this.ResumeLayout(false);
             this.PerformLayout();
 
