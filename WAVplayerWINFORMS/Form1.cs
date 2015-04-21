@@ -91,7 +91,23 @@ namespace WAVplayerWINFORMS
 
         private void DisplaySongPlaying(string filepath)
         {
-            label2.Text = "Now Playing - " + filepath.ToString();
+            /*
+            while(label2.Width < System.Windows.Forms.TextRenderer.MeasureText(label2.Text, new Font(label2.Font.FontFamily, label2.Font.Size)).Width)
+            {
+                label2.Font = new Font(label2.Font.FontFamily, label2.Font.Size - 0.5f, label2.Font.Style);
+                
+            }*/
+ 
+            if (label2.Width < groupBox1.Width)
+            {
+                label2.Text = "Now Playing - " + filepath.ToString();
+            }
+            else
+            {
+                label2.Font = new Font(label2.Font.FontFamily, label2.Font.Size - 0.5f, label2.Font.Style);
+                label2.Text = "Now Playing - " + filepath.ToString();
+            }
+            //label2.Text = "Now Playing - " + filepath.ToString();
         }
         
         private void DisplayError(string errorMessage)
