@@ -91,29 +91,8 @@ namespace WAVplayerWINFORMS
 
         private void DisplaySongPlaying(string filepath)
         {
-            /*
-            while(label2.Width < groupBox1.Width)
-            {
-                label2.Font = new Font(label2.Font.FontFamily, label2.Font.Size - 2.5f, label2.Font.Style);
-                label2.Text = "Now Playing - " + filepath.ToString();
-            }
-            */
-            if (label2.Width > groupBox1.Width)
-            {
-                //weird results here. Everytime you play a new song the font size shrinks by 0.5 "points" maybe?
-                //i need to return to the original font size for each new song played to be evaluated by my if statement
-                //
-                label2.Text = "Now Playing - " + filepath.ToString();
-                label2.Font = new Font(label2.Font.FontFamily, label2.Font.Size - 0.5f, label2.Font.Style);
-                label2.Text = "Now Playing - " + filepath.ToString();
-            }
-            else
-            {
-                label2.Text = "Now Playing - " + filepath.ToString();
-            }
-            //label2.Text = "Now Playing - " + filepath.ToString();
-            //Control(string text, int left, int top, int width, int height);
-            
+            String songName = filepath.Remove(0, 27);
+            label2.Text = "Now Playing - " + songName.ToString();
         }
         
         private void DisplayError(string errorMessage)

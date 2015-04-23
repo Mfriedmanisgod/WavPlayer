@@ -41,15 +41,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-
             this.groupBox2.SuspendLayout();
-
             this.SuspendLayout();
             // 
             // Play
             // 
             this.Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Play.Location = new System.Drawing.Point(15, 142);
+            this.Play.Location = new System.Drawing.Point(15, 158);
             this.Play.Name = "Play";
             this.Play.Size = new System.Drawing.Size(82, 32);
             this.Play.TabIndex = 0;
@@ -60,7 +58,7 @@
             // Stop
             // 
             this.Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stop.Location = new System.Drawing.Point(125, 142);
+            this.Stop.Location = new System.Drawing.Point(125, 158);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(82, 32);
             this.Stop.TabIndex = 2;
@@ -73,11 +71,8 @@
             this.playlistWindow.FormattingEnabled = true;
             this.playlistWindow.Location = new System.Drawing.Point(362, 50);
             this.playlistWindow.Name = "playlistWindow";
-            this.playlistWindow.Size = new System.Drawing.Size(244, 199);
+            this.playlistWindow.Size = new System.Drawing.Size(244, 160);
             this.playlistWindow.TabIndex = 6;
-
-            
-
             // 
             // Add
             // 
@@ -93,7 +88,7 @@
             // Remove
             // 
             this.Remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Remove.Location = new System.Drawing.Point(236, 141);
+            this.Remove.Location = new System.Drawing.Point(236, 157);
             this.Remove.Name = "Remove";
             this.Remove.Size = new System.Drawing.Size(82, 33);
             this.Remove.TabIndex = 8;
@@ -116,14 +111,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-
-            this.label1.Location = new System.Drawing.Point(21, 190);
-
+            this.label1.Location = new System.Drawing.Point(6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 15);
             this.label1.TabIndex = 12;
             this.label1.Text = "Error list";
-
             // 
             // openFileDialog1
             // 
@@ -155,19 +147,16 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(15, 64);
             this.groupBox1.Name = "groupBox1";
-
             this.groupBox1.Size = new System.Drawing.Size(329, 61);
-
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
             // groupBox2
             // 
-
-            this.groupBox2.Location = new System.Drawing.Point(15, 190);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(15, 216);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(329, 59);
-
+            this.groupBox2.Size = new System.Drawing.Size(591, 33);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
@@ -176,8 +165,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 261);
-
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Stop);
@@ -191,10 +178,8 @@
             this.Text = "Willard\'s WAV Wizzard";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-
             this.ResumeLayout(false);
             this.PerformLayout();
 
