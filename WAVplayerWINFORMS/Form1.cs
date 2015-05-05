@@ -91,8 +91,25 @@ namespace WAVplayerWINFORMS
 
         private void DisplaySongPlaying(string filepath)
         {
-            String songName = filepath.Remove(0, 27);
-            label2.Text = "Now Playing - " + songName.ToString();
+            int x = filepath.LastIndexOf('\\');
+            string obj = _items[x] as string;
+
+            
+            //string songName = x.ToString();
+            //songName = string.Empty + x;
+            //songName = new StringBuilder().Append(x).ToString();
+            
+            label2.Text = "Now Playing - " + obj.ToString();
+
+            //String songName = filepath.Remove(0, 27);
+            /*
+            string songName = x.ToString();
+            songName = Convert.ToString(x);
+            songName = string.Format("{0}", x);
+            songName = string.Empty + x;
+            songName = new StringBuilder().Append(x).ToString();
+            */
+            //figure out a way to lop off the 26 characters in your int songname. 
         }
         
         private void DisplayError(string errorMessage)
@@ -103,6 +120,8 @@ namespace WAVplayerWINFORMS
         private void browserButton_Click(object sender, EventArgs e)
         {
             DialogResult result = openFileDialog1.ShowDialog();
+
+            //try and have your browser window only show wav files to avoid picking other file types
 
             if (result == DialogResult.OK) 
             {
