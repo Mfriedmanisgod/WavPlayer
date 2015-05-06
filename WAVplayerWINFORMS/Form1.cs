@@ -91,25 +91,9 @@ namespace WAVplayerWINFORMS
 
         private void DisplaySongPlaying(string filepath)
         {
-            int x = filepath.LastIndexOf('\\');
-            string obj = _items[x] as string;
-
-            
-            //string songName = x.ToString();
-            //songName = string.Empty + x;
-            //songName = new StringBuilder().Append(x).ToString();
-            
-            label2.Text = "Now Playing - " + obj.ToString();
-
-            //String songName = filepath.Remove(0, 27);
-            /*
-            string songName = x.ToString();
-            songName = Convert.ToString(x);
-            songName = string.Format("{0}", x);
-            songName = string.Empty + x;
-            songName = new StringBuilder().Append(x).ToString();
-            */
-            //figure out a way to lop off the 26 characters in your int songname. 
+            int characterIndex = filepath.LastIndexOf('\\');
+            string song = filepath.Substring(characterIndex +1);
+            label2.Text = "Now Playing - " + song.ToString();
         }
         
         private void DisplayError(string errorMessage)
