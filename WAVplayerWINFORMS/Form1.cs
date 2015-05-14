@@ -103,10 +103,9 @@ namespace WAVplayerWINFORMS
 
         private void browserButton_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "wav files|*.wav";
             DialogResult result = openFileDialog1.ShowDialog();
-            openFileDialog1.Filter = "wav files (*.wav)|*.wav";
-            
-            //try and have your browser window only show wav files to avoid picking other file types
             
             if (result == DialogResult.OK) 
             {
@@ -119,6 +118,7 @@ namespace WAVplayerWINFORMS
                 catch (IOException)
 		        {
                 }
+              
             }
         }
 
